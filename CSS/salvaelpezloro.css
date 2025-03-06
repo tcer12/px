@@ -1,0 +1,228 @@
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  background: url('/Acerca_Del_Pez_Loro/Img/fondo.jpg') no-repeat center center/cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  position: relative;
+}
+
+#score {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 2em;
+  font-weight: 900;
+}
+
+#introduction {
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  font-weight: 600;
+  font-size: 0.8em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  transition: opacity 2s;
+}
+
+#restart {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  border-radius: 50%;
+  color: white;
+  background-color: red;
+  border: none;
+  font-weight: 700;
+  font-size: 1.2em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: none;
+  cursor: pointer;
+}
+
+#perfect {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+#youtube,
+#youtube-card {
+  display: none;
+}
+
+@media (min-height: 425px) {
+  /** Youtube logo by https://codepen.io/alvaromontoro */
+  #youtube {
+    z-index: 2;
+    display: block;
+    width: 100px;
+    height: 70px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: red;
+    border-radius: 50% / 11%;
+    transform: scale(0.8);
+    transition: transform 0.5s;
+  }
+
+  #youtube:hover,
+  #youtube:focus {
+    transform: scale(0.9);
+  }
+
+  #youtube::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 7.5%;
+    left: -6%;
+    width: 112%;
+    height: 85%;
+    background: red;
+    border-radius: 9% / 50%;
+  }
+
+  #youtube::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 45px;
+    height: 30px;
+    border: 15px solid transparent;
+    box-sizing: border-box;
+    border-left: 30px solid white;
+  }
+
+  #youtube span {
+    font-size: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  #youtube:hover + #youtube-card {
+    display: block;
+    position: absolute;
+    bottom: 12px;
+    left: 10px;
+    padding: 25px 25px 25px 130px;
+    width: 300px;
+    background-color: white;
+  }
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 600px) {
+  /* Reducir tamaño del score y reposicionarlo */
+  #score {
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+  }
+  
+  /* Ajuste del introduction */
+  #introduction {
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    font-size: 0.7em;
+    position: relative;
+    margin: 10px auto;
+  }
+  
+  /* Ajuste del botón restart */
+  #restart {
+    width: 80px;
+    height: 80px;
+    font-size: 1em;
+  }
+  
+  /* Ajuste del canvas para ocupar ancho completo y redimensionar en altura */
+  #game {
+    width: 90%;
+    max-width: 375px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Ajuste del contenedor principal */
+  .container {
+    padding: 10px;
+  }
+  
+  /* Ajuste de #perfect */
+  #perfect {
+    font-size: 0.8em;
+  }
+  
+  /* Ajuste de Youtube (si estuviera activo) */
+  #youtube {
+    width: 80px;
+    height: 56px;
+    bottom: 10px;
+    left: 10px;
+  }
+  
+  #youtube:hover + #youtube-card {
+    width: 250px;
+    padding: 20px 20px 20px 100px;
+  }
+}
+/* Estilos para el overlay de instrucciones */
+#instruccionesOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.instruccionesContent {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.instruccionesContent h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.instruccionesContent p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.instruccionesContent button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,223 @@
+/* Estilos globales */
+body{
+    width: 100%;
+    height: 100%;
+    background-image: url('img/fondo1.jpeg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden; /* Permitir desplazamiento vertical si es necesario */
+}
+
+/* Contenedor principal */
+.game {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+/* Controles y botones */
+.controls {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    background: #282A3A;
+    color: #FFF;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: 0;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+.disabled {
+    color: #757575;
+}
+
+.stats {
+    color: #FFF;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+/* Board Container */
+.board-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Board y overlay */
+.board,
+.win {
+    border-radius: 5px;
+    box-shadow: 0 25px 50px rgb(33 33 33 / 25%);
+    background: linear-gradient(135deg,  #03001e 0%, #0326c025 30%, #389beca6 70%, #fdeff98f 100%);
+    transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
+    backface-visibility: hidden;
+}
+
+.board {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.board-container.flipped .board {
+    transform: rotateY(180deg) rotateZ(50deg);
+}
+
+.board-container.flipped .win {
+    transform: rotateY(0) rotateZ(0);
+}
+
+/* Tarjetas */
+.card {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* Proporción cuadrada */
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    background: #282A3A;
+    transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
+    backface-visibility: hidden;
+}
+
+.card-back {
+    transform: rotateY(180deg) rotateZ(50deg);
+    font-size: 28pt;
+    user-select: none;
+    text-align: center;
+    line-height: 100%;
+    background: #FDF8E6;
+}
+
+.card.flipped .card-front {
+    transform: rotateY(180deg) rotateZ(50deg);
+}
+
+.card.flipped .card-back {
+    transform: rotateY(0) rotateZ(0);
+}
+
+/* Mensaje de victoria */
+.win {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #FDF8E6;
+    transform: rotateY(180deg) rotateZ(50deg);
+}
+
+.win-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 21pt;
+    color: #282A3A;
+}
+
+.highlight {
+    color: #0335c0;
+}
+
+/* Botón de reinicio */
+.return-button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, rgba(3, 0, 30, 0.7) 0%, rgba(3, 38, 192, 0.7) 30%, rgba(56, 155, 236, 0.7) 70%, rgba(253, 239, 249, 0.7) 100%);
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
+    text-align: center;
+    width: 150px;
+    margin: 20px auto 0;
+}
+
+.return-button:hover {
+    background: linear-gradient(135deg, rgba(3, 0, 30, 0.9) 0%, rgba(3, 38, 192, 0.9) 30%, rgba(56, 155, 236, 0.9) 70%, rgba(253, 239, 249, 0.9) 100%);
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 600px) {
+    /* Ajustar contenedor del juego para que se muestre completo en la pantalla */
+    .game {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+    
+    /* Reducir el tamaño de controles y botones */
+    .controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    
+    button {
+        font-size: 16pt;
+        padding: 8px 16px;
+        margin: 5px;
+    }
+    
+    /* Ajuste de la board para que se muestre completa */
+    .board {
+        grid-gap: 10px;
+        padding: 10px;
+        max-width: 100%;
+    }
+    
+    /* Reducir el tamaño de las tarjetas */
+    .card {
+        /* Al mantener width: 100% y padding-top: 100%, la tarjeta se adapta al ancho de la board */
+    }
+    
+    /* Ajuste de textos */
+    .win-text {
+        font-size: 18pt;
+    }
+    
+    .return-button {
+        width: 120px;
+        font-size: 12pt;
+        padding: 8px 16px;
+    }
+}

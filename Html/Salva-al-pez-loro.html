@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salva el pez loro</title>
+    <link rel="stylesheet" href="../CSS/salvaelpezloro.css">
+</head>
+<body>
+  <div id="instruccionesOverlay">
+    <div class="instruccionesContent">
+      <h2>¿Cómo jugar?</h2>
+      <p>
+        Utiliza el click o toque para aumentar la longitud del palo y pasar sobre las columnas.
+        ¡Llega lo mas lejos posible!
+      </p>
+      <button id="iniciarJuegoBtn">Iniciar juego</button>
+    </div>
+  </div>
+  
+    <div class="container">
+        <div id="score"></div>
+        <canvas id="game" width="375" height="375"></canvas>
+        <div id="introduction"> Klk, ¿Te crees capaz de salvar al pez loro? si es si, utiliza el click de tu mouse para aumentar la longitud del palo y pasar sobre las columnas. <br> !!Hora de salvar al pez loro!!</div>
+        <div id="perfect">Doble puntuación</div>
+        <button id="restart">Reiniciar</button>
+      </div>
+      <div id="mensajeVictoria" style="display:none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.7); color: white; padding: 20px; border-radius: 10px; text-align: center;">
+        <img src="../CSS/img/Lorito.png" alt="Loro" style="width: 100px; height: auto; margin-bottom: 10px;">
+        <p>¡Has ganado! ¡Salvaste al pez loro!</p>
+        <button id="reiniciarVictoria" style="margin-top: 10px; padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Reiniciar</button>
+    </div>
+      <script src="../JAVASCRIPT/SalvaPZL.js"></script>
+    
+  <script>
+    // Al pulsar el botón "Iniciar juego", se oculta el overlay y se inicia el juego.
+    document.getElementById('iniciarJuegoBtn').addEventListener('click', function() {
+      document.getElementById('instruccionesOverlay').style.display = 'none';
+      // Si deseas iniciar el juego automáticamente, puedes llamar aquí a iniciarJuego('normal');
+      // iniciarJuego('normal');
+    });
+  </script>
+</body>
+</html>
