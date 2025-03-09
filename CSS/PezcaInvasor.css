@@ -1,125 +1,332 @@
-/* Estilos globales */
-body {
-  font-family: 'Press Start 2P', cursive;
-  background: #1a1a1a;
-  color: #fff;
+/* RESET */
+* {
   margin: 0;
   padding: 0;
-  background: url('/Acerca_Del_Pez_Loro/CSS/img/fondopezcar.jpg') no-repeat center center/cover;
+  box-sizing: border-box;
 }
 
-/* Menú principal */
-#menu {
+/* FUENTES:
+   - Open Sans para texto normal
+   - Press Start 2P para títulos */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: url('../CSS/img/fondopezcar.jpg') no-repeat center center/cover;
+  color: #fff;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 70px; /* Espacio para el menú fijo */
+}
+
+/* APLICAR FUENTE RETRO SOLO A TÍTULOS */
+h1, h2, .moriste-titulo, .modal-title {
+  font-family: 'Press Start 2P', cursive;
+  color: #060606;
+}
+
+/* MENÚ PRINCIPAL */
+.menu {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: #fff;
-  background: url('/Acerca_Del_Pez_Loro/CSS/img/fondopezcar.jpg') no-repeat center center/cover;
-
+  text-align: center;
+  background: url('../CSS/img/fondopezcar.jpg') no-repeat center center/cover;
 }
 
 .menu-content {
-  text-align: center;
-  background: rgba(0,0,0,0.6);
-  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 40px;
   border-radius: 10px;
 }
 
 .menu-content h1 {
-  font-size: 2.5rem;
+  color: #ffffff;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+}
+
+/* BOTONES GENÉRICOS */
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Colores de botones de dificultad */
+.btn-success { background-color: #28a745; color: #fff; }      /* Normal = verde */
+.btn-danger { background-color: #dc3545; color: #fff; }         /* Difícil = rojo */
+.btn-dark { background-color: #000; color: #fff; }              /* Super Difícil = negro */
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #0069d9;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  color: #fff;
+}
+.btn-info:hover {
+  background-color: #138496;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: #000;
+}
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+.btn-outline-light {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+}
+.btn-outline-light:hover {
+  background: #fff;
+  color: #000;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* COOKIE MODAL: ventana emergente que recomienda voltear el teléfono */
+.orientation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+.orientation-content {
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+.orientation-icon {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+.orientation-content h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.orientation-content p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
   margin-bottom: 20px;
 }
 
-/* Botones */
-.btn {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 1rem;
-}
-
-/* Sección del juego */
+/* SECCIÓN DEL JUEGO */
 #seccionJuego {
-  padding: 20px;
-  background: #001f3f;
+  width: 100%;
   min-height: 100vh;
-  background: url('/Acerca_Del_Pez_Loro/CSS/img/') no-repeat center center/cover;
+
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .barra-superior {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-.estado {
-  font-size: 1.5rem;
+.vidas-y-puntos {
+  display: flex;
+  gap: 20px;
+  font-size: 1.4rem;
 }
 
-/* Canvas */
+.vidas {
+  color: #f00;
+  font-size: 1.6rem;
+}
+
+.puntos {
+  color: rgb(255, 0, 119);
+  font-size: 1.6rem;
+}
+
 #gameCanvas {
   display: block;
   margin: 0 auto;
   background: #004080;
   border: 2px solid #fff;
- 
-  background-size: cover;
+  max-width: 100%;
+  height: auto;
 }
 
-/* Overlay de Game Over */
+/* OVERLAY DE GAME OVER */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.85);
-  display: flex;
+  background: rgba(0,0,0,0.8);
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: 9999;
 }
 
 .overlay-content {
+  background: rgba(255,255,255,0.9);
+  color: #000;
   text-align: center;
+  padding: 40px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
 }
 
-/* Media queries para pantallas pequeñas (teléfonos) */
-@media (max-width: 600px) {
-.menu-content {
+.moriste-titulo {
+  font-size: 2.5rem;
+  color: #c00;
+  margin-bottom: 20px;
+}
+
+/* MODALES (ventanas emergentes tipo cookies) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-dialog {
+  background: #fff;
+  margin: 50px auto;
   width: 90%;
+  max-width: 500px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: #fff;
+  color: #000;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
   padding: 15px;
 }
 
-.menu-content h1 {
-  font-size: 1.8rem;
+.modal-title {
+  font-size: 1.5rem;
+  margin: 0;
 }
 
-.btn {
-  font-size: 0.8rem;
-  padding: 8px 16px;
-  margin: 5px;
-}
-
-#seccionJuego {
-  padding: 10px;
-}
-
-.barra-superior {
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.estado {
+.btn-close {
+  float: right;
   font-size: 1.2rem;
-  margin-top: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-#gameCanvas {
-  width: 100%;
-  height: auto;
-  border-width: 1px;
-  background-size: cover;
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .menu-content {
+    width: 90%;
+    padding: 15px;
+  }
+  .menu-content h1 {
+    font-size: 1.6rem;
+  }
+  .btn {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    margin: 5px;
+  }
+  .vidas-y-puntos {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .vidas, .puntos {
+    font-size: 1.2rem;
+  }
+  #gameCanvas {
+    width: 100%;
+    height: auto;
+  }
+  .overlay-content {
+    width: 90%;
+    max-width: 300px;
+    padding: 20px;
+  }
+  .moriste-titulo {
+    font-size: 2rem;
+  }
+  /* Aumentamos la altura del carrusel para que se vea mejor en móviles */  
+  .cosasImagen {
+    height: 120vh;
+  }
+  #inicioCarousel {
+    height: 90vh;
+  }
 }
+
+@media (max-width: 480px) {
+  .cookie-content, .contenidoDentroImagen {
+    width: 95%;
+    left: 2.5%;
+  }
+  .menu-content h1 {
+    font-size: 1.4rem;
+  }
+  .texto > h1 {
+    font-size: 2rem;
+  }
+  .texto > h2 {
+    font-size: 1.2rem;
+  }
+  .boton {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  footer div {
+    flex: 1 1 100%;
+    text-align: center;
+  }
 }

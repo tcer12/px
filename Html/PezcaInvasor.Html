@@ -1,119 +1,145 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Juego del Pez Loro</title>
-  <!-- Nuestro CSS personalizado -->
-  <link rel="stylesheet" href="../CSS/PezcaInvasor.css">
-  <!-- Fuente retro para estilo videojuego -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pezca a los Depredadores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fuentes: Roboto para textos y Press Start 2P para títulos -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../CSS/PezcaInvasor.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-  <!-- Menú principal -->
-  <div id="menu" class="container-fluid p-0">
-    <div class="menu-content">
-      <h1>Pezca a los depredadores</h1>
-      <button id="btnJugar" class="btn btn-primary">Jugar</button>
-      <button id="btnTutorial" class="btn btn-info">Tutorial</button>
-      <button id="btnDificultad" class="btn btn-warning">Dificultad</button>
-      <button id="btnAprender" class="btn btn-success">Aprender Más</button>
-      <a href="https://conservaelpezloro.roanexus.com/">
-      <button id="" class="btn btn-warning">Volver</button>
-    </a>
-
+    <!-- Modal de orientación (tipo cookies) para recomendar voltear el teléfono -->
+    <div id="orientationModal" class="orientation-modal">
+        <div class="orientation-content">
+            <div class="orientation-icon">📱↔️</div>
+            <h2>¡Mejora tu experiencia!</h2>
+            <p>Voltea tu teléfono a horizontal para disfrutar mejor la página.</p>
+            <button id="orientationClose" class="btn btn-primary">Entendido</button>
+        </div>
     </div>
-  </div>
 
-  <!--Tutorial -->
-  <div class="modal fade" id="modalTutorial" tabindex="-1" aria-labelledby="modalTutorialLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-         <div class="modal-header">
-          <h5 class="modal-title" id="modalTutorialLabel">Tutorial</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+    <!-- Menú principal -->
+    <div id="menu" class="menu">
+        <div class="menu-content">
+            <h1>Pezca a los Depredadores</h1>
+            <button id="btnJugar" class="btn btn-primary">Jugar</button>
+            <button id="btnTutorial" class="btn btn-info">Tutorial</button>
+            <button id="btnDificultad" class="btn btn-warning">Dificultad</button>
+            <button id="btnAprender" class="btn btn-success">Aprender Más</button>
+            <a href="../index.html">
+                <button class="btn btn-warning">Volver</button>
+            </a>
         </div>
-        <div class="modal-body">
-          <ul>
-            <li>Tienes 3 vidas (corazones).</li>
-            <li>Clic en los peces para eliminarlos.</li>
-            <li>Elimina invasores y pez león para sumar puntos.</li>
-            <li>¡No toques al pez loro, o perderás una vida!</li>
-            <li>Cada vez que pierdes una vida, el juego se acelera.</li>
-          </ul>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <!-- Aprender Más -->
-  <div class="modal fade" id="modalAprender" tabindex="-1" aria-labelledby="modalAprenderLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-         <div class="modal-header">
-          <h5 class="modal-title" id="modalAprenderLabel">Aprender Más</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+    <!-- Ventana emergente Tutorial -->
+    <div id="modalTutorial" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tutorial</h5>
+                    <button type="button" class="btn-close" onclick="closeModal('modalTutorial')" aria-label="Cerrar">×</button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>Tienes 3 vidas representadas por corazones.</li>
+                        <li>Haz clic (o toca) en los peces invasores o el pez león para sumar puntos.</li>
+                        <li>¡No toques al pez loro, o perderás una vida!</li>
+                        <li>Cada vez que pierdes una vida, el juego se acelera.</li>
+                        <li>Cada 200 puntos, la dificultad sube (más velocidad).</li>
+                        <li>Voltea tu teléfono a horizontal para una mejor experiencia.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('modalTutorial')">Cerrar</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-         <a href="https://conservaelpezloro.roanexus.com/">
-          Información sobre el pez loro, su hábitat y curiosidades.
-        </a>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <!--Dificultad -->
-  <div class="modal fade" id="modalDificultad" tabindex="-1" aria-labelledby="modalDificultadLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-         <div class="modal-header">
-          <h5 class="modal-title" id="modalDificultadLabel">Selecciona la Dificultad</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+    <!-- Ventana emergente Aprender Más -->
+    <div id="modalAprender" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Aprender Más</h5>
+                    <button type="button" class="btn-close" onclick="closeModal('modalAprender')" aria-label="Cerrar">×</button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <a href="https://conservaelpezloro.roanexus.com/" target="_blank">
+                            Visita la página oficial
+                        </a>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('modalAprender')">Cerrar</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body text-center">
-          <button class="btn btn-primary" onclick="seleccionarDificultad('normal')">Normal</button>
-          <button class="btn btn-danger" onclick="seleccionarDificultad('dificil')">Difícil</button>
-          <button class="btn btn-dark" onclick="seleccionarDificultad('superdificil')">Super Difícil</button>
+    </div>
+
+    <!-- Ventana emergente Dificultad -->
+    <div id="modalDificultad" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Selecciona la Dificultad</h5>
+                    <button type="button" class="btn-close" onclick="closeModal('modalDificultad')" aria-label="Cerrar">×</button>
+                </div>
+                <div class="modal-body" style="text-align: center;">
+                    <button class="btn btn-success" onclick="seleccionarDificultad('normal')">Normal</button>
+                    <button class="btn btn-danger" onclick="seleccionarDificultad('dificil')">Difícil</button>
+                    <button class="btn btn-dark" onclick="seleccionarDificultad('superdificil')">Super Difícil</button>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 
-  <!-- Sección del juego (inicialmente oculta) -->
-  <div id="seccionJuego" class="container" style="display:none;">
-    <div class="barra-superior">
-      <button id="btnVolverMenu" class="btn btn-outline-light">Volver al Menú</button>
-      <div class="estado">
-        <span id="contadorVidas">❤️❤️❤️</span>
-        <span id="contadorPuntos">0</span>
-      </div>
+    <!-- Sección del juego -->
+    <div id="seccionJuego" class="container" style="display:none;">
+        <div class="barra-superior">
+            <div class="vidas-y-puntos">
+                <span id="contadorVidas" class="vidas">❤️❤️❤️</span>
+                <span id="contadorPuntos" class="puntos">0</span>
+            </div>
+            <button id="btnVolverMenu" class="btn btn-outline-light">Volver al Menú</button>
+        </div>
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
     </div>
-    <canvas id="gameCanvas" width="800" height="400"></canvas>
-    <div id="mensajePezLoro"></div>
-  </div>
 
-  <!--Game Over -->
-  <div id="overlayGameOver" class="overlay" style="display:none;">
-    <div class="overlay-content">
-      <h2>¡Moriste!</h2>
-      <p id="mensajeDescepcion"></p>
-      <button id="btnReintentar" class="btn btn-primary">Reintentar</button>
-      <button id="btnMenuGameOver" class="btn btn-secondary">Volver al Menú</button>
+    <!-- Overlay de Game Over -->
+    <div id="overlayGameOver" class="overlay" style="display:none;">
+        <div class="overlay-content">
+            <h2 class="moriste-titulo">¡Moriste!</h2>
+            <p id="mensajeDescepcion"></p>
+            <button id="btnReintentar" class="btn btn-primary">Reintentar</button>
+            <button id="btnMenuGameOver" class="btn btn-secondary">Volver al Menú</button>
+        </div>
     </div>
-  </div>
 
-  <!-- Scripts, jQuery, Bootstrap y nuestro JS -->
-  <script src="/js/jquery-3.5.1.slim.min.js"></script>
-  <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../JAVASCRIPT/Pezca.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JAVASCRIPT/Pezca.js"></script>
+    <script>
+      // Al pulsar "Conoce Más" en el cookie modal, se cierra y se hace scroll a la sección "Historia"
+      document.getElementById('btnCookieClose')?.addEventListener('click', function() {
+        document.getElementById('cookieModal').style.display = 'none';
+        document.getElementById('elemento1')?.scrollIntoView({ behavior: 'smooth' });
+      });
+      
+      // Cierra el modal de orientación
+      document.getElementById('orientationClose').addEventListener('click', function() {
+        document.getElementById('orientationModal').style.display = 'none';
+      });
+      
+      // Opcional: Mostrar el modal de orientación solo si el dispositivo está en vertical
+      if (window.innerHeight > window.innerWidth) {
+        document.getElementById('orientationModal').style.display = 'flex';
+      }
+    </script>
 </body>
 </html>
