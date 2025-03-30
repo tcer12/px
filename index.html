@@ -8,15 +8,17 @@
   <link rel="stylesheet" href="./CSS/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <title>Pez Loro</title>
+  <script src="/px-main/JAVASCRIPT/Fondo.js"></script>
+  <script src="/px-main/JAVASCRIPT/carru.js"></script>
 </head>
 <body>
+
+
+
   <!-- Menú de navegación fijo y responsivo -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#inicio">Salvemos al pez loro
-
-        
-      </a>
+      <a class="navbar-brand" href="#inicio">Salvemos al pez loro</a>
       
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
@@ -35,49 +37,21 @@
       </div>
     </div>
   </nav>
-
-  <!-- Sección de inicio con carrusel y contenedor reducido -->
-  <div class="pagina" id="inicio">
-    <div class="cosasImagen">
-      <!-- Carrusel de imágenes en el inicio -->
-      <div id="inicioCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./CSS/img/loroPez.webp" class="d-block w-100" alt="Imagen 1">
-          </div>
-          <div class="carousel-item">
-            <img src="./CSS/img/pezlorobonito.webp" class="d-block w-100" alt="Imagen 2">
-          </div>
-          <div class="carousel-item">
-            <img src="./CSS/img/pezLoro3.jpg" class="d-block w-100" alt="Imagen 3">
-          </div>  <div class="carousel-item">
-            <img src="./CSS/img/pezlorobonito2.webp" class="d-block w-100" alt="Imagen 3">
-          </div>
-         
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#inicioCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#inicioCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Siguiente</span>
-        </button>
-      </div>
-      <!-- Contenedor del inicio (más reducido para PC y móviles) -->
-      <div class="contenidoDentroImagen">
-        <div class="texto">
-            <h1>Salvemos al Pez Loro</h1>
-            <h2>El Tesoro de Nuestros Mares</h2>
-            <p class="textoPDeImagen">
-              En la República Dominicana, este pez vital está al borde de la extinción.
-              Su pérdida compromete la salud de nuestros arrecifes y playas.
-              ¡Actúa ya para protegerlo!
-            </p>
-            <a href="#elemento1"><button class="boton">Conoce Más</button></a>
-          </div>
-          
-      </div>
+  <div class="pagina-container">
+    <!-- Contenedor de texto proporcionado -->
+    <div class="texto">
+        <h1>.</h1>
+        <h2>El Ángel Costero</h2>
+        <p class="textoPDeImagen">
+            Los escáridos, conocidos comúnmente como peces loro, son una familia de peces marinos incluidos en el
+            orden de los perciformes. La mayoría de sus especies son tropicales y están distribuidas en los arrecifes de
+            coral del Mar Rojo, el Océano Atlántico, el Océano Índico y el Océano Pacífico.
+            <br /><br />
+            Su nombre científico es Scaridae. Se reproducen mediante fecundación externa y son ovíparos. Además, son
+            hermafroditas secuenciales, lo que significa que nacen como hembras y, con el tiempo, algunos se convierten en machos.
+        </p>
+    </div>
+    
     </div>
 
     <article>
@@ -144,78 +118,243 @@
     </article>
   </div>
 
+  <section class="instagram-section">
+    <div class="container">
+        <div class="instagram-header">
+            <div class="instagram-logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" fill="#ffffff"/>
+                </svg>
+            </div>
+            <h2 class="instagram-title">Síguenos en Instagram</h2>
+        </div>
+        <p class="instagram-subtitle">Conoce más sobre el pez loro y nuestros esfuerzos de conservación</p>
+        
+        <div class="instagram-carousel">
+            <div class="carousel-container" id="carouselContainer">
+                <div class="instagram-post">
+                    <img src="./CSS/img/Screenshot 2025-03-29 103829ss.png" alt="Pez loro en su hábitat">
+                    <div class="post-overlay">
+                        <p class="post-caption">Nuestro objetivo es fomentar la creatividad, el trabajo en equipo y la pasión por la robótica en jóvenes, desarrollando habilidades en ciencia, tecnología, ingeniería y matemáticas (STEM)... #PezLoro #ConservacionMarina</p>
+                        <p class="post-date">2 meses atrás</p>
+                    </div>
+                </div>
+                <div class="instagram-post">
+                    <img src="./CSS/img/Screenshot 2025-03-29 103722.png" alt="Actividad de limpieza de playa">
+                    <div class="post-overlay">
+                        <p class="post-caption">Voluntarios limpiando las playas para proteger el hábitat marino. ¡Únete a nuestra próxima actividad! #ProtejamosElMar #PezLoro</p>
+                        <p class="post-date">5 días atrás</p>
+                    </div>
+                </div>
+                <div class="instagram-post">
+                    <img src="./CSS/img/pezlorobonito.webp" alt="Infografía sobre el pez loro">
+                    <div class="post-overlay">
+                        <p class="post-caption">¿Sabías que el pez loro puede producir hasta 90kg de arena al año? Infórmate más sobre esta increíble especie. #DatosCuriosos #PezLoro</p>
+                        <p class="post-date">1 semana atrás</p>
+                    </div>
+                </div>
+                <div class="instagram-post">
+                    <img src="./CSS/img/Screenshot 2025-03-29 11103034567.png" alt="Taller educativo">
+                    <div class="post-overlay">
+                        <p class="post-caption">Hoy estuvimos charlando en el ITLA con nuestra población estudiantil, a los cuales les encantó nuestro proyecto y se comprometieron a regar la voz.</p>
+                        <p class="post-date">hace 17 horas atrás</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-controls" id="carouselDots">
+            <div class="carousel-dot active" data-index="0"></div>
+            <div class="carousel-dot" data-index="1"></div>
+            <div class="carousel-dot" data-index="2"></div>
+            <div class="carousel-dot" data-index="3"></div>
+        </div>
+        
+        <div class="instagram-follow">
+            <a href="https://www.instagram.com/synergy24218?utm_source=qr&igsh=bnJ4dWQwajl4czhn/" target="_blank" class="follow-button">
+                <i>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" fill="#ffffff"/>
+                    </svg>
+                </i>
+                Seguir @synergy24218
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const carouselContainer = document.getElementById('carouselContainer');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const posts = document.querySelectorAll('.instagram-post');
+        
+        let currentIndex = 0;
+        let startX;
+        let touchStartX;
+        let isTouching = false;
+        
+        // Inicializa el carrusel
+        function initCarousel() {
+            if (window.innerWidth < 768) {
+                // Para móviles, muestra una publicación a la vez
+                updateCarousel(currentIndex);
+            } else if (window.innerWidth < 992) {
+                // Para tablets, muestra dos publicaciones
+                posts.forEach(post => {
+                    post.style.flex = '0 0 45%';
+                });
+            } else {
+                // Para escritorio, muestra tres publicaciones
+                posts.forEach(post => {
+                    post.style.flex = '0 0 30%';
+                });
+            }
+        }
+        
+        function updateCarousel(index) {
+            const postWidth = posts[0].offsetWidth + 15; // 15 = margin-right
+            
+            // Calcula cuánto desplazar el carrusel
+            const offset = -index * postWidth;
+            carouselContainer.style.transform = `translateX(${offset}px)`;
+            
+            // Actualiza los puntos indicadores
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            
+            currentIndex = index;
+        }
+        
+        // Event listeners para los puntos del carrusel
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                updateCarousel(index);
+            });
+        });
+        
+        // Touch events para swipe en móviles
+        carouselContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+            isTouching = true;
+        });
+        
+        carouselContainer.addEventListener('touchmove', (e) => {
+            if (!isTouching) return;
+            
+            const touchX = e.touches[0].clientX;
+            const diff = touchStartX - touchX;
+            
+            // Pequeño desplazamiento mientras se arrastra
+            if (Math.abs(diff) > 5) {
+                e.preventDefault();
+            }
+        });
+        
+        carouselContainer.addEventListener('touchend', (e) => {
+            if (!isTouching) return;
+            
+            const touchEndX = e.changedTouches[0].clientX;
+            const diff = touchStartX - touchEndX;
+            
+            // Si el deslizamiento es significativo, cambia la diapositiva
+            if (diff > 50 && currentIndex < posts.length - 1) {
+                updateCarousel(currentIndex + 1);
+            } else if (diff < -50 && currentIndex > 0) {
+                updateCarousel(currentIndex - 1);
+            }
+            
+            isTouching = false;
+        });
+        
+        // Auto-rotación
+        let interval = setInterval(() => {
+            if (currentIndex < posts.length - 1) {
+                updateCarousel(currentIndex + 1);
+            } else {
+                updateCarousel(0);
+            }
+        }, 2000);
+        
+        // Detener auto-rotación al interactuar
+        carouselContainer.addEventListener('mouseenter', () => {
+            clearInterval(interval);
+        });
+        
+        carouselContainer.addEventListener('mouseleave', () => {
+            interval = setInterval(() => {
+                if (currentIndex < posts.length - 1) {
+                    updateCarousel(currentIndex + 1);
+                } else {
+                    updateCarousel(0);
+                }
+            }, 2000);
+        });
+        
+        // Inicializar y actualizar en cambio de tamaño
+        initCarousel();
+        window.addEventListener('resize', initCarousel);
+    });
+</script>
   <!-- Sección de Depredadores -->
   <div class="containerALL" id="elemento5">
-    <h2 class="distanciadoh2">Depredadores del pez loro</h2>
+    <h2 class="distanciadoh2">"Alternativa y Solución"
+      Peces invasores de nuestras aguas</h2>
     <p>Selecione una imagen para ver mas informacion</p>
     <div class="container">
       <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card">
-                  <img src="./CSS/img/pezGato.jpg" class="card-img-top" alt="Imagen 1"
-                    data-bs-toggle="modal" data-bs-target="#modalImagen"
-                    onclick="mostrarModal('CSS/img/pezGato2.jpeg', 'Descubre más sobre este depredador', 'El pez gato es un pez de cuerpo alargado, sin escamas, con barbillas alrededor de la boca. Habita en ríos y lagos, y se encuentra en todo el mundo. Se reproduce mediante la puesta de huevos que son fertilizados externamente, y los alevines nacen listos para nadar.')">
-                  <div class="card-body">
-                    <h5 class="card-title">Pez Gato</h5>
-                  </div>
-                </div>
+          <!-- Updated Depredadores section without Anguila Morena and Pez Mero -->
+<div class="row">
+  <div class="col-md-4">
+    <div class="card">
+      <img src="./CSS/img/pezGato.jpg" class="card-img-top" alt="Imagen 1"
+        data-bs-toggle="modal" data-bs-target="#modalImagen"
+        onclick="mostrarModal('CSS/img/pezGato2.jpeg', 'Descubre más sobre este depredador', 'El pez gato es un pez de cuerpo alargado, sin escamas, con barbillas alrededor de la boca. Habita en ríos y lagos, y se encuentra en todo el mundo. Se reproduce mediante la puesta de huevos que son fertilizados externamente, y los alevines nacen listos para nadar.')">
+      <div class="card-body">
+        <h5 class="card-title">Pez Gato (Invasor)</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <img src="./CSS/img/pezLeon.jpeg" class="card-img-top" alt="Imagen 2"
+        data-bs-toggle="modal" data-bs-target="#modalImagen"
+        onclick="mostrarModal('CSS/img/pezLeon.jpeg', 'Descubre más sobre este depredador', 'El pez león es un pez tropical con una melena de espinas venenosas en su cabeza y aletas. Habita en arrecifes de coral y es conocido por su aspecto colorido y su agresividad. Se reproduce poniendo huevos que fertiliza externamente, formando grandes nubes de huevos en el agua.')">
+      <div class="card-body">
+        <h5 class="card-title">Pez León (Invasor)</h5>
+      </div>
+    </div>
+  </div>
+  <h2 class="distanciadoh2">Depredadores Naturales</h2>
+  <div class="col-md-4">
+    <div class="card">
+      <img src="./CSS/img/humanosPesca.jpg" class="card-img-top" alt="Imagen 1"
+        data-bs-toggle="modal" data-bs-target="#modalImagen"
+        onclick="mostrarModal('CSS/img/humanosPesca.jpg', 'Descubre más sobre estos depredadores', 'Curiosamente estos depredadores somos nosotros mismos, con la práctica de la pesca y el consumo de estos peces estamos poniendo en riesgo lo que son nuestras mismas playas que en el caso de R.D es uno de sus atractivos turísticos que más apoya a la economía.')">
+      <div class="card-body">
+        <h5 class="card-title">Depredador humano y natural</h5>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<div class="row">
+  <div class="col-md-4">
+    <div class="card">
+      <img src="./CSS/img/tiburon.jpg" class="card-img-top" alt="Imagen 2"
+        data-bs-toggle="modal" data-bs-target="#modalImagen"
+        onclick="mostrarModal('CSS/img/tiburon.jpg', 'Descubre más sobre este depredador', 'Es un pez cartilaginoso con un cuerpo hidrodinámico diseñado para la velocidad y la caza. Posee varias hileras de dientes reemplazables, gran sentido del olfato y electroreceptores para detectar presas. Existen diversas especies, desde el pequeño tiburón linterna hasta el imponente tiburón blanco.')">
+      <div class="card-body">
+        <h5 class="card-title">Tiburón depredador natural</h5>
+      </div>
+    </div>
+  </div>
+</div>
               </div>
-              <div class="col-md-4">
-                <div class="card">
-                  <img src="./CSS/img/pezLeon.jpeg" class="card-img-top" alt="Imagen 2"
-                    data-bs-toggle="modal" data-bs-target="#modalImagen"
-                    onclick="mostrarModal('CSS/img/pezLeon.jpeg', 'Descubre más sobre este depredador', 'El pez león es un pez tropical con una melena de espinas venenosas en su cabeza y aletas. Habita en arrecifes de coral y es conocido por su aspecto colorido y su agresividad. Se reproduce poniendo huevos que fertiliza externamente, formando grandes nubes de huevos en el agua.')">
-                  <div class="card-body">
-                    <h5 class="card-title">Pez León</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card">
-                  <img src="./CSS/img/anguilaMorena.jpg" class="card-img-top" alt="Imagen 3"
-                    data-bs-toggle="modal" data-bs-target="#modalImagen"
-                    onclick="mostrarModal('CSS/img/anguilaMorena.jpg', 'Descubre más sobre este depredador', 'Es un pez marino de cuerpo alargado y sin escamas, con piel gruesa y lisa. Habita en arrecifes y grietas rocosas, donde se esconde durante el día y caza de noche. Tiene una mordida fuerte con dientes afilados y una apariencia similar a la de una serpiente.')">
-                  <div class="card-body">
-                    <h5 class="card-title">Anguila Morena</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br />
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card">
-                  <img src="./CSS/img/humanosPesca.jpg" class="card-img-top" alt="Imagen 1"
-                    data-bs-toggle="modal" data-bs-target="#modalImagen"
-                    onclick="mostrarModal('CSS/img/humanosPesca.jpg', 'Descubre más sobre estos depredadores', 'Curiosamente estos depredadores somos nosotros mismos, con la práctica de la pesca y el consumo de estos peces estamos poniendo en riesgo lo que son nuestras mismas playas que en el caso de R.D es uno de sus atractivos turísticos que más apoya a la economía.')">
-                  <div class="card-body">
-                    <h5 class="card-title">Humanos (Pesca)</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card">
-                  <img src="./CSS/img/tiburon.jpg" class="card-img-top" alt="Imagen 2"
-                    data-bs-toggle="modal" data-bs-target="#modalImagen"
-                    onclick="mostrarModal('CSS/img/tiburon.jpg', 'Descubre más sobre este depredador', 'Es un pez cartilaginoso con un cuerpo hidrodinámico diseñado para la velocidad y la caza. Posee varias hileras de dientes reemplazables, gran sentido del olfato y electroreceptores para detectar presas. Existen diversas especies, desde el pequeño tiburón linterna hasta el imponente tiburón blanco.')">
-                  <div class="card-body">
-                    <h5 class="card-title">Tiburón</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card">
-                  <img src="./CSS/img/pezMero.jpeg" class="card-img-top" alt="Imagen 3"
-                    data-bs-toggle="modal" data-bs-target="#modalImagen"
-                    onclick="mostrarModal('CSS/img/pezMero.jpeg', 'Descubre más sobre este depredador', 'Es un pez de cuerpo robusto y boca grande que habita en arrecifes de coral y zonas rocosas. Es un depredador solitario que se alimenta de peces y crustáceos. Algunas especies pueden cambiar de sexo a lo largo de su vida. Son muy apreciados en la pesca comercial y deportiva.')">
-                  <div class="card-body">
-                    <h5 class="card-title">Pez Mero</h5>
-                  </div>
-                </div>
-              </div>
+             
             </div>
           </div>
         </div>
@@ -223,29 +362,20 @@
     </div>
 
     <!-- Sección de "Consumir" -->
-    <div class="consumirPeces" id="elemento6">
-      <div class="depredadoresCentrado2">
-        <h2 class="distanciadoh2">¿Por qué deberíamos consumir al pez león y el pez gato?</h2>
-        <div class="cuatroDepredadores">
-          <div class="losDepredadores2">
-            <img src="./CSS/img/pezLeon2.jpeg" alt="Pez León">
-            <h2>Pez León</h2>
-            <p>El pez león es un pez tropical con una melena de espinas venenosas en su cabeza y aletas. Habita en arrecifes de coral y es conocido por su aspecto colorido y su agresividad. Se reproduce poniendo huevos que fertiliza externamente, formando grandes nubes de huevos en el agua.</p>
-          </div>
-          <div class="losDepredadores2">
-            <img src="./CSS/img/pezGato2.jpeg" alt="Pez Gato">
-            <h2>Pez Gato</h2>
-            <p>El pez gato es un pez de cuerpo alargado, sin escamas, con barbillas alrededor de la boca. Habita en ríos y lagos, y se encuentra en todo el mundo. Se reproduce mediante la puesta de huevos que son fertilizados externamente, y los alevines nacen listos para nadar.</p>
-          </div>
-          <div class="losDepredadores2">
-            <img src="./CSS/img/beneficios.jpg" alt="Beneficios">
-            <h2>Beneficios de consumir estos peces</h2>
-            <p>El pez gato es rico en proteínas y bajo en grasas, mientras que el pez león es bajo en calorías y nutritivo. Consumir ambos ayuda a obtener beneficios nutricionales y a controlar la población del pez león como especie invasora, aunque es importante asegurar su preparación adecuada y sostenibilidad.</p>
-          </div>
-        </div>
+    <!-- Sección de "Consumir" with updated title -->
+<div class="consumirPeces" id="elemento6">
+  <div class="depredadoresCentrado2">
+    <h2 class="distanciadoh2">Alternativa y Solución: Peces invasores de nuestras aguas</h2>
+    <div class="cuatroDepredadores">
+     
+      <div class="losDepredadores2">
+        <img src="./CSS/img/beneficios.jpg" alt="Beneficios">
+        <h2>Alternativa</h2>
+        <p>El pez gato es rico en proteínas y bajo en grasas, mientras que el pez león es bajo en calorías y nutritivo. Consumir ambos ayuda a obtener beneficios nutricionales y a controlar la población del pez león como especie invasora, aunque es importante asegurar su preparación adecuada y sostenibilidad.</p>
       </div>
     </div>
-
+  </div>
+</div>
     <!-- Sección "¿Somos depredadores del pez loro?" -->
     <div class="contenido" id="elemento7">
       <h2 class="distanciadoh2">¿Somos depredadores del pez loro?</h2>
@@ -259,29 +389,144 @@
           </p>
         </div>
       </div>
-      <footer>
-        <div>
-          <h3>Pez Loro</h3>
-          <cite>Politecnico ITLA</cite>
-          <ul>
-            <li><a href="#elemento1">Historia</a></li>
-            <li><a href="#elemento2">Características</a></li>
-            <li><a href="#elemento3">Importancia</a></li>
-            <li><a href="#elemento4">No Consumirlo</a></li>
-            <li><a href="#elemento5">Depredadores</a></li>
-            <li><a href="#elemento6">Consumir</a></li>
-            <li><a href="#elemento7">Depredadores Humanos</a></li>
-          </ul>
+      <section class="noticias-container">
+        <h2 class="noticias-titulo">Últimas Noticias sobre el Pez Loro</h2>
+        
+        <div class="noticias-grid">
+            <!-- Noticia 1 -->
+            <article class="noticia-card">
+                <img src="/px-main/CSS/img/diariolibre.jpg" alt="Pez loro en arrecife" class="noticia-imagen">
+                <div class="noticia-contenido">
+                    <p class="noticia-fecha">30 de marzo, 2025</p>
+                    <h3 class="noticia-titulo">En Boca Chica se sigue vendiendo pez loro, pese a su veda</h3>
+                    <p class="noticia-resumen">En las playas de Boca Chica se sigue comercializando el pez loro, a pesar de que su captura, pesca y comercialización están en veda desde 2017 y continuarán así hasta julio de 2025</p>
+                    <a href="https://www.diariolibre.com/planeta/medioambiente/2025/03/30/la-venta-ilegal-del-pez-loro-persiste-en-boca-chica-pese-a-prohibicion/3052539?fbclid=PAZXh0bgNhZW0CMTEAAaacEz7hK5ndcHYHtfED3jhP4G7d9JX-4MAJxXqgN-HfCYQut2np9YxoOC4_aem_8IibIJY1qDcQXUCwD0QVaA" class="noticia-enlace">Leer más</a>
+                </div>
+            </article>
+            
+            <!-- Noticia 2 -->
+            <article class="noticia-card">
+                <img src="/px-main/CSS/img/image-diariolibre.jpg" alt="Pesca ilegal de pez loro" class="noticia-imagen">
+                <div class="noticia-contenido">
+                    <p class="noticia-fecha">03 de julio, 2023</p>
+                    <h3 class="noticia-titulo">Pez loro seguirá en veda hasta 2025</h3>
+                    <p class="noticia-resumen">a pesca del pez loro y otras especies marinas relacionadas a la vida de los arrecifes de coral seguirá prohibida hasta el 2025. Mediante el Decreto 281-23</p>
+                    <a href="https://www.diariolibre.com/planeta/medioambiente/2023/07/02/sigue-la-veda-del-pez-loro-hasta-el-2025/2392475?utm_source=relacionadas&utm_medium=nota&utm_campaign=relacionadas" class="noticia-enlace">Leer más</a>
+                </div>
+            </article>
+            
+           
         </div>
-        <div>
-          <h3>Prueba tu habilidad</h3>
-          <h4>en estos juegos</h4>
-          <a href="./Html/Juego-de-memoria.html" target="_blank"><button>Prueba la memoria</button></a>
-          <a href="./Html/PezcaInvasor.Html" target="_blank"><button>Pezca depredadores</button></a>
+    </section>
+
+     
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-section links-section">
+            <h3 class="footer-heading">Pez Loro</h3>
+            <cite class="footer-cite">Politecnico ITLA</cite>
+            <ul class="footer-links">
+              <li><a href="#elemento1">Historia</a></li>
+              <li><a href="#elemento2">Características</a></li>
+              <li><a href="#elemento3">Importancia</a></li>
+              <li><a href="#elemento4">No Consumirlo</a></li>
+              <li><a href="#elemento5">Depredadores</a></li>
+              <li><a href="#elemento6">Consumir</a></li>
+              <li><a href="#elemento7">Depredadores Humanos</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-section games-section">
+            <h3 class="footer-heading">Prueba tu habilidad</h3>
+            <h4 class="footer-subheading">en estos juegos</h4>
+            <div class="footer-buttons">
+              <a href="./Html/Juego-de-memoria.html" target="_blank">
+                <button class="footer-button">Prueba la memoria</button>
+              </a>
+              <a href="./Html/PezcaInvasor.Html" target="_blank">
+                <button class="footer-button">Pezca depredadores</button>
+              </a>
+            </div>
+          </div>
+      
+          <div class="footer-section social-section">
+            <h3 class="footer-heading">Síguenos</h3>
+            <div class="social-accounts">
+              <div class="social-account">
+                <a href="https://www.instagram.com/synergy24218?utm_source=qr&igsh=bnJ4dWQwajl4czhn/" target="_blank" class="social-link">
+                  <div class="social-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" fill="#ffffff"/>
+                    </svg>
+                  </div>
+                  <div class="social-info">
+                    <div class="social-name">@synergy24218</div>
+                    <div class="social-desc">Página Oficial</div>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="social-account">
+                <a href="https://www.instagram.com/ambienterd/" target="_blank" class="social-link">
+                  <div class="social-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" fill="#ffffff"/>
+                    </svg>
+                  </div>
+                  <div class="social-info">
+                    <div class="social-name">@ambiente_rd</div>
+                    <div class="social-desc">Ministerio de Ambiente</div>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="social-account">
+                <a href="https://www.instagram.com/educacionrd/" target="_blank" class="social-link">
+                  <div class="social-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" fill="#ffffff"/>
+                    </svg>
+                  </div>
+                  <div class="social-info">
+                    <div class="social-name">@educacionrd</div>
+                    <div class="social-desc">Ministerio de Educación</div>
+                  </div>
+                </a>
+              </div>
+          
+              <div class="social-account">
+                <a href="https://www.instagram.com/ambienterd/" target="_blank" class="social-link">
+                  <div class="social-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" fill="#ffffff"/>
+                    </svg>
+                  </div>
+                  <div class="social-info">
+                    <div class="social-name">@distritoeducativo1005</div>
+                    <div class="social-desc">Distrito Escolar 10-05</div>
+                  </div>
+                </a>
+              </div>
+          
+              <div class="social-account">
+                <a href="https://www.instagram.com/etpminerd?igsh=cHpyb2Q3MjF4aGRq" target="_blank" class="social-link">
+                  <div class="social-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" fill="#ffffff"/>
+                    </svg>
+                  </div>
+                  <div class="social-info">
+                    <div class="social-name">@edutecnicoprofesional</div>
+                    <div class="social-desc">Educación Técnico Profesional</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        
+        <div class="footer-copyright">
+          <p>Desarrollado en el <cite> <a href="https://www.instagram.com/politecnicoitla/">Politécnico ITLA</a></cite> para la concientización de la conservación del pez loro. <br>2025</p>
         </div>
-        <p style="font-size: small;">
-            Desarrollado en el <cite>Politécnico ITLA</cite>  para la concientización de la conservación del pez loro. <br>2025
-          </p>
       </footer>
     </div>
   </div>
